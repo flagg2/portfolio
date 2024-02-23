@@ -6,21 +6,23 @@ import {
    type ImageFunction,
 } from "astro:content"
 
-const heroSchema = z.object({
-   greeting: z.string(),
-   typewriter: z.string().array(),
-   email: z.object({
-      href: z.string(),
-      text: z.string(),
-   }),
-   openToWork: z.object({
-      open: z.boolean(),
-      textTrue: z.string(),
-      textFalse: z.string(),
-   }),
-   basedIn: z.string(),
-   building: z.string(),
-})
+const heroSchema = ({ image }: { image: ImageFunction }) =>
+   z.object({
+      greeting: z.string(),
+      typewriter: z.string().array(),
+      avatar: image(),
+      email: z.object({
+         href: z.string(),
+         text: z.string(),
+      }),
+      openToWork: z.object({
+         open: z.boolean(),
+         textTrue: z.string(),
+         textFalse: z.string(),
+      }),
+      basedIn: z.string(),
+      building: z.string(),
+   })
 
 // 2. Define a `type` and `schema` for each collection
 const hero = defineCollection({
@@ -28,7 +30,7 @@ const hero = defineCollection({
    schema: heroSchema,
 })
 
-type Hero = z.infer<typeof heroSchema>
+type Hero = z.infer<ReturnType<typeof heroSchema>>
 
 const portfolioItemSchema = ({ image }: { image: ImageFunction }) =>
    z.object({

@@ -10,14 +10,14 @@ import { castLocale } from "../../../../utils/locale"
 const locale = castLocale(Astro.currentLocale)
 
 const {
-   data: { greeting, basedIn, email, openToWork, building, typewriter },
+   data: { greeting, basedIn, email, openToWork, building, typewriter, avatar },
 } = await getEntry("hero", locale)
 ---
 
 <section class="gradient-bg w-full pt-40">
    <Container>
       <Image
-         src="/me.png"
+         src={avatar}
          alt="Samuel Wittlinger"
          class="rounded-full"
          width={160}

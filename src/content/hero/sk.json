@@ -1,5 +1,6 @@
 {
    "greeting": "Ahoj! Volám sa Samuel",
+   "avatar": "/public/me.png",
    "typewriter": [
       "Web Developer",
       "React Developer",
