@@ -1,0 +1,24 @@
+---
+import Container from "../Container.astro"
+
+interface Props {
+   emoji: string
+   heading: string
+   id: string
+   description?: string
+   children?: any
+}
+
+const { emoji, heading, description, id } = Astro.props
+---
+
+<section id={id}>
+   <Container>
+      <div class="flex items-center mb-4">
+         <p class="text-5xl mr-4">{emoji}</p>
+         <h2 class="text-3xl font-bold">{heading}</h2>
+      </div>
+      <p class="mt-2 mb-10 font-extralight">{description}</p>
+      <slot />
+   </Container>
+</section>

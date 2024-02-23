@@ -1,0 +1,51 @@
+---
+import Image from "astro/components/Image.astro"
+import Section from "../../Section.astro"
+import type { Testimonial } from "@/content/config"
+import Spacer from "@/components/Spacer.astro"
+
+interface Props extends Testimonial {
+   id: string
+}
+
+const { title, id, reviewer, company, text } = Astro.props
+---
+
+<Section emoji="✍️" heading={title} id={id}>
+   <div class="flex items-center pb-2">
+      <div class="w-24">
+         <Image
+            src={reviewer.avatar}
+            width={80}
+            height={80}
+            alt={reviewer.name}
+            class="rounded-full"
+         />
+      </div>
+      <div class="flex flex-col flex-1">
+         <a
+            href={`https://twitter.com/${reviewer.twitterHandle}`}
+            class="hover:underline"
+            target="_blank"><p class="font-bold text-xl">{reviewer.name}</p></a
+         >
+         <p>{reviewer.occupation}</p>
+         <Spacer h={1} />
+         <Image src={company.logo} alt="company logo" height={23} />
+      </div>
+      <div class="flex flex-col w-24 gap-2 items-center">
+         <Image
+            src="/icons/clutch.svg"
+            width={80}
+            height={23}
+            alt="clutch logo"
+         />
+         <Image src="/stars.svg" width={80} height={15} alt="google logo" />
+         <a
+            class="hover:underline font-semibold"
+            href="https://clutch.co/profile/looplabs#reviews">5.0 / 5.0</a
+         >
+      </div>
+   </div>
+   <hr class="h-[1px] bg-white w-full my-2" />
+   <p>{text}</p>
+</Section>

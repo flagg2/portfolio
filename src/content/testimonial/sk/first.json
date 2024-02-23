@@ -1,0 +1,13 @@
+{
+   "title": "Čo hovoria klienti",
+   "reviewer": {
+      "name": "Valery",
+      "occupation": "Runtime Developer",
+      "avatar": "/public/avatars/valery.webp",
+      "twitterHandle": "cl0w5"
+   },
+   "company": {
+      "logo": "/public/icons/hydra.svg"
+   },
+   "text": "Parádny design a kvalitná realizácia v TypeScripte. Presné termíny dodania a skvelá komunikácia“"
+}

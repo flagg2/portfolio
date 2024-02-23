@@ -1,0 +1,26 @@
+---
+// Import the `twMerge` function from `@tailwindcss/merge`
+import { twMerge } from "tailwind-merge"
+
+// Define the component's props
+interface Props {
+   class?: string
+   emoji: string
+   children: any
+   href?: string
+}
+
+const { class: additionalClasses = "", emoji, href } = Astro.props as Props
+
+// Default classes for the component
+const defaultClasses =
+   "flex items-center rounded-lg p-3 text-md border border-gray-800 cursor-pointer"
+
+// Merge the default classes with any additional classes passed as a prop
+const classes = twMerge(defaultClasses, additionalClasses)
+---
+
+<a href={href} class={classes}>
+   <span class="text-3xl pr-2">{emoji}</span>
+   <slot />
+</a>

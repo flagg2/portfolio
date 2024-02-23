@@ -1,0 +1,19 @@
+{
+   "title": "Fabros",
+   "description": "Representative website for timber construction company",
+   "href": "https://fabros.sk/",
+   "image": "/public/screenshots/fabros.webp",
+   "imageAlt": "Renova Install Website",
+   "tech": [
+      {
+         "text": "Wordpress",
+         "image": "/public/icons/wordpress.svg",
+         "imageAlt": "Wordpress"
+      },
+      {
+         "text": "Bricks Builder",
+         "image": "/public/icons/bricks.svg",
+         "imageAlt": "Bricks Builder"
+      }
+   ]
+}

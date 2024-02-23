@@ -1,0 +1,10 @@
+---
+interface Props {
+   h?: number
+   w?: number
+}
+
+const { h, w } = Astro.props
+---
+
+<div style={{ height: `${h ?? 0 / 2}rem`, width: `${w ?? 0 / 2}rem` }}></div>

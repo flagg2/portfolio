@@ -1,0 +1,53 @@
+---
+import Image from "astro/components/Image.astro"
+import type { PortfolioItem } from "../../../../content/config"
+
+interface Props extends PortfolioItem {}
+
+const { title, description, href, image, imageAlt, tech } = Astro.props
+---
+
+<a
+   class="flex flex-col rounded-lg gap-2 bg-bg border-border border hover:scale-[103%] cursor-pointer transition-all group"
+   href={href}
+   target="_blank"
+>
+   <Image
+      src={image}
+      alt={imageAlt}
+      width={600}
+      class="w-full rounded-t-lg max-h-36 object-cover"
+   />
+   <div class="p-4 flex flex-col gap-4">
+      <h3 class="text-xl font-semibold">
+         <span class="mr-1">🏷️</span>
+         {title}
+      </h3>
+      <p class="text-sm font-light">{description}</p>
+      <div class="flex flex-wrap gap-3 gap-y-0">
+         {
+            tech.map((t) => (
+               <div class="flex gap-1 items-center mb-4">
+                  <Image
+                     src={t.image}
+                     alt={t.imageAlt}
+                     width={16}
+                     height={16}
+                  />
+                  <span class="text-xs font-light">{t.text}</span>
+               </div>
+            ))
+         }
+      </div>
+      <div
+         class="text-sm font-semibold flex gap-1 items-center group-hover:underline"
+      >
+         Open <Image
+            src="/icons/open.svg"
+            alt="open svg"
+            width={20}
+            height={20}
+         />
+      </div>
+   </div>
+</a>

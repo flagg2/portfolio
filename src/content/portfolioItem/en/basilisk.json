@@ -1,0 +1,24 @@
+{
+   "title": "Basilisk",
+   "description": "Landing page for AMM Basilisk on Polkadot",
+   "href": "https://bsx.fi",
+   "image": "/public/screenshots/basilisk.webp",
+   "imageAlt": "Renova Install Website",
+   "tech": [
+      {
+         "text": "Typescript",
+         "image": "/public/icons/typescript.svg",
+         "imageAlt": "Typescript"
+      },
+      {
+         "text": "React",
+         "image": "/public/icons/react.svg",
+         "imageAlt": "React"
+      },
+      {
+         "text": "Next.js",
+         "image": "/public/icons/nextjs.svg",
+         "imageAlt": "Next.js"
+      }
+   ]
+}

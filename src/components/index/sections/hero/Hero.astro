@@ -1,0 +1,77 @@
+---
+import Image from "astro/components/Image.astro"
+import Spacer from "../../../Spacer.astro"
+import TypeWriter from "../../../TypeWriter.astro"
+import Container from "../../../Container.astro"
+import Badge from "../../../Badge.astro"
+import { getEntry } from "astro:content"
+import { castLocale } from "../../../../utils/locale"
+
+const locale = castLocale(Astro.currentLocale)
+
+const {
+   data: { greeting, basedIn, email, openToWork, building, typewriter },
+} = await getEntry("hero", locale)
+---
+
+<section class="gradient-bg w-full pt-40">
+   <Container>
+      <Image
+         src="/me.png"
+         alt="Samuel Wittlinger"
+         class="rounded-full"
+         width={160}
+         height={160}
+      />
+      <h1 class="text-5xl font-bold mt-4 text-white">
+         {greeting}
+         <span class="ml-2">👋</span>
+         <TypeWriter strings={typewriter} />
+         <Spacer h={2} />
+      </h1>
+      <div class="flex gap-4 flex-wrap">
+         <Badge emoji="📬" href="mailto:samuel.wittlinger@looplabs.dev">
+            {email.text}
+         </Badge>
+         {
+            openToWork.open ? (
+               <Badge emoji="👨‍💻" href="#contact" class="border-green-500">
+                  {openToWork.textTrue}
+               </Badge>
+            ) : (
+               <Badge emoji="👨‍💻" class="border-red-500 cursor-none">
+                  {openToWork.textFalse}
+               </Badge>
+            )
+         }
+         <Badge emoji="📍">{basedIn}</Badge>
+         <Badge emoji="🚀">{building}</Badge>
+      </div>
+   </Container>
+</section>
+
+<style>
+   .gradient-bg {
+      background-color: hsla(15, 0%, 0%, 1);
+      background-image: radial-gradient(
+            at 98% 43%,
+            hsla(138, 55%, 56%, 0.4) 0px,
+            transparent 50%
+         ),
+         radial-gradient(
+            at 74% 12%,
+            hsla(240, 89%, 45%, 0.4) 0px,
+            transparent 50%
+         ),
+         radial-gradient(
+            at 50% 8%,
+            hsla(352, 87%, 40%, 0.4) 0px,
+            transparent 50%
+         ),
+         radial-gradient(
+            at 7% 16%,
+            hsla(311, 100%, 71%, 0.4) 0px,
+            transparent 50%
+         );
+   }
+</style>

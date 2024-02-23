@@ -1,0 +1,13 @@
+{
+   "title": "They know better",
+   "reviewer": {
+      "name": "Valery",
+      "occupation": "Runtime Developer",
+      "avatar": "/public/avatars/valery.webp",
+      "twitterHandle": "cl0w5"
+   },
+   "company": {
+      "logo": "/public/icons/hydra.svg"
+   },
+   "text": "Incredible work using TypeScript and some kick ass design. Very accurate with delivery timelines and great communication"
+}

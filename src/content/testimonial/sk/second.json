@@ -1,0 +1,13 @@
+{
+   "title": "Čo hovoria klienti",
+   "reviewer": {
+      "name": "Simon",
+      "occupation": "Noderunner",
+      "avatar": "/public/avatars/simon.webp",
+      "twitterHandle": "dev0_sik"
+   },
+   "company": {
+      "logo": "/public/icons/hydra.svg"
+   },
+   "text": "Oceňujem veľmi aktívny prístup, najmä schopnosť rýchlo sa ponoriť do projektu a prísť s nápadmi a návrhmi, ako by mal vyzerať a pôsobiť."
+}

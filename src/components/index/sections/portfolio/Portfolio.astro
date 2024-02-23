@@ -1,0 +1,20 @@
+---
+import Section from "../../Section.astro"
+import { getEntry } from "astro:content"
+import { getEntries } from "astro:content"
+import PortfolioCard from "./PortfolioCard.astro"
+import { castLocale } from "@/utils/locale"
+
+const locale = castLocale(Astro.currentLocale)
+
+const portfolio = await getEntry("portfolio", locale)
+const { title, description, items } = portfolio.data
+
+const portfolioItems = await getEntries(items)
+---
+
+<Section emoji="🧙" heading={title} id="latest-work" description={description}>
+   <div class="grid grid-cols-2 gap-4">
+      {portfolioItems.map((item) => <PortfolioCard {...item.data} />)}
+   </div>
+</Section>

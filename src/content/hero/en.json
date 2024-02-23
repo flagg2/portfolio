@@ -1,0 +1,22 @@
+{
+   "greeting": "Hey! I am Samuel.",
+   "typewriter": [
+      "Software Engineer",
+      "Web Developer",
+      "Tech Enthusiast",
+      "React Developer",
+      "Astro Developer",
+      "WordPress Developer"
+   ],
+   "email": {
+      "href": "mailto:samuel.wittlinger@looplaps.dev",
+      "text": "samuel.wittlinger@looplaps.dev"
+   },
+   "openToWork": {
+      "open": true,
+      "textTrue": "Open to Work",
+      "textFalse": "Currently Busy"
+   },
+   "basedIn": "Based in Bratislava, Slovakia",
+   "building": "Building cool stuff at LoopLaps"
+}

@@ -1,0 +1,21 @@
+{
+   "greeting": "Ahoj! Volám sa Samuel",
+   "typewriter": [
+      "Web Developer",
+      "React Developer",
+      "Astro Developer",
+      "WordPress Developer",
+      "Softvérový Inžinier"
+   ],
+   "email": {
+      "href": "mailto:samuel.wittlinger@looplaps.dev",
+      "text": "samuel.wittlinger@looplaps.dev"
+   },
+   "openToWork": {
+      "open": true,
+      "textTrue": "Poďme spolupracovať",
+      "textFalse": "Momentálne zaneprázdnený"
+   },
+   "basedIn": "Žijem v Bratislave",
+   "building": "Budujem kvalitný softvér v LoopLaps"
+}

@@ -1,0 +1,11 @@
+---
+import { castLocale } from "@/utils/locale"
+import { getEntry } from "astro:content"
+import Testimonial from "./Testimonial.astro"
+
+const locale = castLocale(Astro.currentLocale)
+
+const { data } = await getEntry("testimonial", `${locale}/second`)
+---
+
+<Testimonial {...data} id="first-testimonial" />

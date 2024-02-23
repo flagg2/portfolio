@@ -1,0 +1,30 @@
+---
+import Spacer from "./Spacer.astro"
+
+interface Props {
+   strings: string[]
+}
+
+const { strings } = Astro.props
+---
+
+<type-writer data-strings={JSON.stringify(strings)}>
+   <Spacer h={2} />
+   <h2 class="text-2xl font-medium" id="typewriter">&nbsp;</h2>
+</type-writer>
+
+<script>
+   import TW from "typewriter-effect/dist/core"
+   class TWClass extends HTMLElement {
+      constructor() {
+         super()
+
+         new TW("#typewriter", {
+            strings: JSON.parse(this.dataset.strings ?? "[]"),
+            autoStart: true,
+            loop: true,
+         })
+      }
+   }
+   customElements.define("type-writer", TWClass)
+</script>

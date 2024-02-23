@@ -1,0 +1,13 @@
+{
+   "title": "They know better",
+   "reviewer": {
+      "name": "Simon",
+      "occupation": "Noderunner",
+      "avatar": "/public/avatars/simon.webp",
+      "twitterHandle": "dev0_sik"
+   },
+   "company": {
+      "logo": "/public/icons/hydra.svg"
+   },
+   "text": "The most impressive prop is their awareness and hunger. They instantly deep-dive into the project and come up with amazing ideas and suggestions on how it could best look and feel."
+}

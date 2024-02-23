@@ -1,0 +1,29 @@
+{
+   "title": "Renova Install",
+   "description": "Landing page with complex calculator form for construction company",
+   "href": "https://renovainstall.sk",
+   "image": "/public/screenshots/renova.webp",
+   "imageAlt": "Renova Install Website",
+   "tech": [
+      {
+         "text": "Typescript",
+         "image": "/public/icons/typescript.svg",
+         "imageAlt": "Typescript"
+      },
+      {
+         "text": "React",
+         "image": "/public/icons/react.svg",
+         "imageAlt": "React"
+      },
+      {
+         "text": "Next.js",
+         "image": "/public/icons/nextjs.svg",
+         "imageAlt": "Next.js"
+      },
+      {
+         "text": "Node.js",
+         "image": "/public/icons/nodejs.svg",
+         "imageAlt": "Node.js"
+      }
+   ]
+}
