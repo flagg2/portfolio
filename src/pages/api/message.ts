@@ -1,6 +1,8 @@
 import { TypeGrid } from "@flagg2/typegrid"
 import type { APIRoute } from "astro"
 
+export const prerender = false
+
 const { SG_API_KEY } = import.meta.env
 
 const tg = TypeGrid.createSync({
