@@ -36,6 +36,6 @@ export const POST: APIRoute = async ({ request }) => {
       return new Response("OK", { status: 200 })
    } else {
       result.log()
-      return new Response("Internal Server Error", { status: 500 })
+      return new Response(result.origin.message, { status: 500 })
    }
 }
