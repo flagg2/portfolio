@@ -25,7 +25,7 @@ export default function ContactForm({
             className="w-full flex flex-col gap-4"
             onSubmit={async (e) => {
                e.preventDefault()
-               toast.loading("Sending...")
+               toast.loading(loading)
                const result = await fetch("/api/message", {
                   method: "POST",
                   body: JSON.stringify({ email, message }),
