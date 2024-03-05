@@ -14,7 +14,7 @@ const portfolioItems = await getEntries(items)
 ---
 
 <Section emoji="🧙" heading={title} id="latest-work" description={description}>
-   <div class="grid grid-cols-2 gap-4">
+   <div class="grid grid-cols-1 tablet:grid-cols-2 gap-4">
       {portfolioItems.map((item) => <PortfolioCard {...item.data} />)}
    </div>
 </Section>

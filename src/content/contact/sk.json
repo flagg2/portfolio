@@ -1,0 +1,19 @@
+{
+   "title": "Poďme spolupracovať",
+   "description": "Ak vás moje portfólio zaujalo, tak ma neváhajte kontaktovať. Rád s vami budem spolupracovať na vašom projekte.",
+   "formT": {
+      "emailPlaceholder": "Váš email",
+      "messagePlaceholder": "Vaša správa",
+      "send": "Odoslať",
+      "success": "Vaša správa bola úspešne odoslaná!",
+      "error": "Nastala chyba pri odosielaní správy. Skúste to prosím neskôr.",
+      "loading": "Odosielam..."
+   },
+   "socials": [
+      {
+         "title": "samuel.wittlinger@looplabs.dev",
+         "emoji": "📬",
+         "href": "mailto:samuel.wittlinger@looplabs.dev"
+      }
+   ]
+}

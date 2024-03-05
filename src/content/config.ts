@@ -155,6 +155,47 @@ const team = defineCollection({
    schema: teamSchema,
 })
 
+const contactSchema = ({ image }: { image: ImageFunction }) =>
+   z.object({
+      title: z.string(),
+      description: z.string(),
+      formT: z.object({
+         emailPlaceholder: z.string(),
+         messagePlaceholder: z.string(),
+         send: z.string(),
+         success: z.string(),
+         error: z.string(),
+         loading: z.string(),
+      }),
+      socials: z.array(
+         z.union([
+            z.object({
+               title: z.string(),
+               href: z.string(),
+               emoji: z.string(),
+            }),
+            z.object({
+               title: z.string(),
+               href: z.string(),
+               image: image(),
+               imageAlt: z.string(),
+            }),
+         ]),
+      ),
+   })
+
+const contact = defineCollection({
+   type: "data",
+   schema: contactSchema,
+})
+
+type AstroImage = {
+   src: string
+   width: number
+   height: number
+   format: "avif" | "png" | "webp" | "jpeg" | "jpg" | "svg" | "tiff" | "gif"
+}
+
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
    hero,
@@ -165,6 +206,7 @@ export const collections = {
    technologyItem,
    teamMember,
    team,
+   contact,
 }
 export type {
    Hero,
@@ -176,4 +218,5 @@ export type {
    TechnologySection,
    TeamMember,
    Team,
+   AstroImage,
 }

@@ -1,0 +1,19 @@
+{
+   "title": "Let's Connect",
+   "description": "Enough chit-chat. Let's connect and see how we can help",
+   "formT": {
+      "emailPlaceholder": "Your email",
+      "messagePlaceholder": "Your message",
+      "send": "Send",
+      "success": "Thank you for your message! I will get back to you as soon as possible.",
+      "error": "An error occurred while sending the message",
+      "loading": "Sending..."
+   },
+   "socials": [
+      {
+         "title": "samuel.wittlinger@looplabs.dev",
+         "emoji": "📬",
+         "href": "mailto:samuel.wittlinger@looplabs.dev"
+      }
+   ]
+}

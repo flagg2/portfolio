@@ -1,8 +1,7 @@
 import { TypeGrid } from "@flagg2/typegrid"
 import type { APIRoute } from "astro"
 
-const SG_API_KEY =
-   "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"
+const { SG_API_KEY } = import.meta.env
 
 const tg = TypeGrid.createSync({
    apiKey: SG_API_KEY,
@@ -12,7 +11,7 @@ const tg = TypeGrid.createSync({
    },
 })
 
-export const POST: APIRoute = async ({ params, request }) => {
+export const POST: APIRoute = async ({ request }) => {
    const body = await request.json()
    const { email, message } = body
 
@@ -36,6 +35,7 @@ export const POST: APIRoute = async ({ params, request }) => {
    if (result.isOk()) {
       return new Response("OK", { status: 200 })
    } else {
+      result.log()
       return new Response("Internal Server Error", { status: 500 })
    }
 }

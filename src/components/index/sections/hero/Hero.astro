@@ -14,7 +14,7 @@ const {
 } = await getEntry("hero", locale)
 ---
 
-<section class="gradient-bg w-full pt-40">
+<section class="gradient-bg w-full pt-32 laptop:pt-36">
    <Container>
       <Image
          src={avatar}
@@ -29,23 +29,40 @@ const {
          <TypeWriter strings={typewriter} />
          <Spacer h={2} />
       </h1>
-      <div class="flex gap-4 flex-wrap">
-         <Badge emoji="📬" href="mailto:samuel.wittlinger@looplabs.dev">
+      <div class="flex gap-3 flex-wrap">
+         <Badge
+            emoji="📬"
+            href="mailto:samuel.wittlinger@looplabs.dev"
+            class="w-full largePhone:w-auto"
+         >
             {email.text}
          </Badge>
          {
             openToWork.open ? (
-               <Badge emoji="👨‍💻" href="#contact" class="border-green-500">
+               <Badge
+                  emoji="👨‍💻"
+                  href="#contact"
+                  class="border-green-500 w-full largePhone:w-auto"
+               >
                   {openToWork.textTrue}
                </Badge>
             ) : (
-               <Badge emoji="👨‍💻" class="border-red-500 cursor-none">
+               <Badge
+                  emoji="👨‍💻"
+                  class="border-red-500 cursor-none w-full largePhone:w-auto"
+               >
                   {openToWork.textFalse}
                </Badge>
             )
          }
-         <Badge emoji="📍">{basedIn}</Badge>
-         <Badge emoji="🚀">{building}</Badge>
+         <Badge
+            class="w-full largePhone:w-auto border-none p-0 largePhone:border largePhone:p-3"
+            emoji="📍">{basedIn}</Badge
+         >
+         <Badge
+            class="w-full largePhone:w-auto border-none p-0 largePhone:border largePhone:p-3"
+            emoji="🚀">{building}</Badge
+         >
       </div>
    </Container>
 </section>

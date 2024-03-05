@@ -1,8 +1,53 @@
 ---
+import { getEntry } from "astro:content"
 import Section from "../../Section.astro"
 import Form from "./Form"
+import { castLocale } from "@/utils/locale"
+import Badge from "@/components/Badge.astro"
+import Spacer from "@/components/Spacer.astro"
+
+const locale = castLocale(Astro.currentLocale)
+
+const {
+   data: { title, description, socials, formT },
+} = await getEntry("contact", locale)
+
+console.log(formT)
+console.log(locale)
 ---
 
-<Section id="contact" emoji=":)" heading="heading">
-   <Form client:load />
-</Section>
+<div class="gradient-bg pb-40">
+   <Section id="contact" emoji="🤝" heading={title} description={description}>
+      <div class="flex gap-4">
+         {socials.map((social) => <Badge {...social}>{social.title}</Badge>)}
+      </div>
+      <Spacer h={2} />
+      <Form client:load {...formT} />
+   </Section>
+</div>
+
+<style>
+   .gradient-bg {
+      background-color: hsla(0, 0%, 0%, 1);
+      background-image: radial-gradient(
+            at 11% 100%,
+            hsla(311, 100%, 71%, 0.4) 0px,
+            transparent 50%
+         ),
+         radial-gradient(
+            at 49% 100%,
+            hsla(352, 100%, 40%, 0.4) 0px,
+            transparent 50%
+         ),
+         radial-gradient(
+            at 72% 100%,
+            hsla(240, 100%, 45%, 0.4) 0px,
+            transparent 50%
+         ),
+         radial-gradient(
+            at 96% 100%,
+            hsla(138, 100%, 56%, 0.4) 0px,
+            transparent 50%
+         );
+   }
+</style>
