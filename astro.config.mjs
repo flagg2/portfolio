@@ -16,6 +16,6 @@ export default defineConfig({
          prefixDefaultLocale: false,
       },
    },
-   output: "server",
-   adapter: cloudflare({ imageService: "compile" }),
+   output: "hybrid",
+   adapter: cloudflare({ imageService: "cloudflare" }),
 })
