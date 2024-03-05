@@ -1,0 +1,41 @@
+---
+import { useTranslatePath } from "@/utils/i18n"
+import { castLocale } from "@/utils/locale"
+
+const errors = {
+   email: "",
+}
+
+const locale = castLocale(Astro.currentLocale)
+
+if (Astro.request.method === "POST") {
+   try {
+      const data = await Astro.request.formData()
+      const email = data.get("email")
+      const message = data.get("message")
+
+      if (email === null) {
+         errors.email =
+            locale == "en" ? "Email is required" : "Email je povinný"
+      }
+      console.log(email, message)
+   } catch (error) {
+      if (error instanceof Error) {
+         console.error(error.message)
+      }
+   }
+}
+
+const translatePath = useTranslatePath(locale)
+---
+
+<form action={translatePath("/")} method="post">
+   <label for="email">Email</label>
+   <input type="email" id="email" name="email" required />
+   <p>{errors.email}</p>
+
+   <label for="message">Message</label>
+   <textarea id="message" name="message" required></textarea>
+
+   <button type="submit">Send</button>
+</form>
