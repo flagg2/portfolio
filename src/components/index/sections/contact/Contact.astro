@@ -1,5 +1,8 @@
 ---
-import Form from "./Form.astro"
+import Section from "../../Section.astro"
+import Form from "./Form"
 ---
 
-<Form />
+<Section id="contact" emoji=":)" heading="heading">
+   <Form client:load />
+</Section>
