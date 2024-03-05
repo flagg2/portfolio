@@ -1,0 +1,20 @@
+{
+   "title": "Môj tech stack",
+   "description": "Skvelí developeri potrebujú efektívne nástroje. Využívame všetko od Wordpressu pre jednoduchšie webové stránky a overovanie nápadov až po vlastný kód pre robustné a škálovateľné aplikácie.",
+   "frontend": {
+      "title": "Frontend",
+      "items": ["astro", "react", "tailwind"]
+   },
+   "backend": {
+      "title": "Backend",
+      "items": ["node", "postgres", "hono"]
+   },
+   "fullstack": {
+      "title": "Fullstack",
+      "items": ["next", "typescript"]
+   },
+   "wordpress": {
+      "title": "WordPress",
+      "items": ["wordpress", "bricks"]
+   }
+}

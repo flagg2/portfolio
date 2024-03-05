@@ -1,0 +1,25 @@
+---
+import { castLocale } from "@/utils/locale"
+import { getEntry } from "astro:content"
+import Section from "../../Section.astro"
+import { getEntries } from "astro:content"
+import TeamMember from "./TeamMember.astro"
+
+const locale = castLocale(Astro.currentLocale)
+
+const {
+   data: { title, description, members: memberIds },
+} = await getEntry("team", locale)
+
+const members = await getEntries(memberIds)
+---
+
+<Section id="my-team" emoji="♾️" heading={title} description={description}>
+   <div class="flex flex-row flex-wrap justify-between">
+      {
+         members.map((member) => {
+            return <TeamMember {...member.data} />
+         })
+      }
+   </div>
+</Section>

@@ -1,0 +1,20 @@
+{
+   "title": "Tech Stack that ships",
+   "description": "Great builders need great tools. We utilise everything from Wordpress for simpler websites and idea validation, to raw custom code for robust and scalable applications.",
+   "frontend": {
+      "title": "Frontend",
+      "items": ["astro", "react", "tailwind"]
+   },
+   "backend": {
+      "title": "Backend",
+      "items": ["node", "postgres", "hono"]
+   },
+   "fullstack": {
+      "title": "Fullstack",
+      "items": ["next", "typescript"]
+   },
+   "wordpress": {
+      "title": "WordPress",
+      "items": ["wordpress", "bricks"]
+   }
+}

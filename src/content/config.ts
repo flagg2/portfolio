@@ -90,6 +90,90 @@ const testimonial = defineCollection({
 
 type Testimonial = z.infer<ReturnType<typeof testimonialItemSchema>>
 
+const technologySectionSchema = z.object({
+   items: z.array(reference("technologyItem")),
+   title: z.string(),
+})
+
+type TechnologySection = z.infer<typeof technologySectionSchema>
+
+const techStackSchema = z.object({
+   title: z.string(),
+   description: z.string(),
+   frontend: technologySectionSchema,
+   backend: technologySectionSchema,
+   fullstack: technologySectionSchema,
+   wordpress: technologySectionSchema,
+})
+
+const techStack = defineCollection({
+   type: "data",
+   schema: techStackSchema,
+})
+
+type TechStack = z.infer<typeof techStackSchema>
+
+const technologyItemSchema = ({ image }: { image: ImageFunction }) =>
+   z.object({
+      logo: image(),
+      logoAlt: z.string(),
+      title: z.string(),
+   })
+
+type Technology = z.infer<ReturnType<typeof technologyItemSchema>>
+
+const technologyItem = defineCollection({
+   type: "data",
+   schema: technologyItemSchema,
+})
+
+const teamMemberSchema = ({ image }: { image: ImageFunction }) =>
+   z.object({
+      name: z.string(),
+      role: z.string(),
+      avatar: image(),
+      avatarAlt: z.string(),
+   })
+
+type TeamMember = z.infer<ReturnType<typeof teamMemberSchema>>
+
+const teamMember = defineCollection({
+   type: "data",
+   schema: teamMemberSchema,
+})
+
+const teamSchema = z.object({
+   title: z.string(),
+   description: z.string(),
+   members: z.array(reference("teamMember")),
+})
+
+type Team = z.infer<typeof teamSchema>
+
+const team = defineCollection({
+   type: "data",
+   schema: teamSchema,
+})
+
 // 3. Export a single `collections` object to register your collection(s)
-export const collections = { hero, portfolioItem, portfolio, testimonial }
-export type { Hero, PortfolioItem, Portfolio, Testimonial }
+export const collections = {
+   hero,
+   portfolioItem,
+   portfolio,
+   testimonial,
+   techStack,
+   technologyItem,
+   teamMember,
+   team,
+}
+export type {
+   Hero,
+   PortfolioItem,
+   Portfolio,
+   Testimonial,
+   TechStack,
+   Technology,
+   TechnologySection,
+   TeamMember,
+   Team,
+}

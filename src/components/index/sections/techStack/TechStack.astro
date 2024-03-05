@@ -1,0 +1,21 @@
+---
+import Section from "../../Section.astro"
+import { getEntry } from "astro:content"
+import TechnologySection from "./TechnologySection.astro"
+import { castLocale } from "@/utils/locale"
+
+const locale = castLocale(Astro.currentLocale)
+
+const {
+   data: { description, title, frontend, backend, fullstack, wordpress },
+} = await getEntry("techStack", locale)
+---
+
+<Section emoji="🛠️" heading={title} description={description} id="technology">
+   <div class="flex flex-col gap-6">
+      <TechnologySection {...frontend} />
+      <TechnologySection {...backend} />
+      <TechnologySection {...fullstack} />
+      <TechnologySection {...wordpress} />
+   </div>
+</Section>
