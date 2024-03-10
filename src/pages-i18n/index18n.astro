@@ -7,6 +7,13 @@ import TechStack from "@/components/index/sections/techStack/TechStack.astro"
 import SecondTestimonial from "@/components/index/sections/testimonials/SecondTestimonial.astro"
 import Team from "@/components/index/sections/team/Team.astro"
 import Contact from "@/components/index/sections/contact/Contact.astro"
+import Menu from "@/components/menu/Menu"
+import { getEntry } from "astro:content"
+import { castLocale } from "@/utils/locale"
+
+const locale = castLocale(Astro.currentLocale)
+
+const { data: menuT } = await getEntry("menu", locale)
 ---
 
 <Layout title="Samuel Wittlinger | Fullstack Developer">
@@ -19,4 +26,5 @@ import Contact from "@/components/index/sections/contact/Contact.astro"
       <Team />
       <Contact />
    </div>
+   <Menu client:load t={menuT} />
 </Layout>

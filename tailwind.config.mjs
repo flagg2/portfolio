@@ -9,6 +9,7 @@ export default {
             text: "#f2f2f2",
             bg: "#111111",
             border: "#242424",
+            "menu-bg": "rgba(0, 0, 0, 0.1)",
          },
          fontFamily: {
             sans: ["Inter", ...defaultTheme.fontFamily.sans],

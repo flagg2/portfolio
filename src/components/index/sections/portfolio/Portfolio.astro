@@ -13,7 +13,7 @@ const { title, description, items } = portfolio.data
 const portfolioItems = await getEntries(items)
 ---
 
-<Section emoji="🧙" heading={title} id="latest-work" description={description}>
+<Section emoji="🧙" heading={title} id="portfolio" description={description}>
    <div class="grid grid-cols-1 tablet:grid-cols-2 gap-4">
       {portfolioItems.map((item) => <PortfolioCard {...item.data} />)}
    </div>

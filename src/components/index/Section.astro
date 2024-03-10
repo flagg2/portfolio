@@ -12,7 +12,8 @@ interface Props {
 const { emoji, heading, description, id } = Astro.props
 ---
 
-<section id={id}>
+<section class="relative">
+   <div class="absolute -top-24" id={id}></div>
    <Container>
       <div class="flex items-center mb-4">
          <p class="text-5xl mr-4">{emoji}</p>

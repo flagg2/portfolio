@@ -196,6 +196,20 @@ type AstroImage = {
    format: "avif" | "png" | "webp" | "jpeg" | "jpg" | "svg" | "tiff" | "gif"
 }
 
+const menuSchema = z.object({
+   portfolio: z.string(),
+   techStack: z.string(),
+   team: z.string(),
+   contact: z.string(),
+})
+
+type Menu = z.infer<typeof menuSchema>
+
+const menu = defineCollection({
+   type: "data",
+   schema: menuSchema,
+})
+
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
    hero,
@@ -207,6 +221,7 @@ export const collections = {
    teamMember,
    team,
    contact,
+   menu,
 }
 export type {
    Hero,
@@ -219,4 +234,5 @@ export type {
    TeamMember,
    Team,
    AstroImage,
+   Menu,
 }
