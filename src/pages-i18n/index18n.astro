@@ -26,5 +26,5 @@ const { data: menuT } = await getEntry("menu", locale)
       <Team />
       <Contact />
    </div>
-   <Menu client:load t={menuT} />
+   <Menu client:load t={menuT} locale={locale} />
 </Layout>
