@@ -31,6 +31,27 @@ const { title, alternates, description, lang } = Astro.props
       <meta name="generator" content={Astro.generator} />
       <title>{title}</title>
       {description && <meta name="description" content={description} />}
+
+      <!-- analytics -->
+      <script type="text/partytown" src="fancy-analytics.js"></script>
+      <!-- Google tag (gtag.js) -->
+      <script
+         type="text/partytown"
+         async
+         src="https://www.googletagmanager.com/gtag/js?id=G-Z6XXWCVFLC"
+      ></script>
+      <script type="text/partytown">
+         // @ts-ignore
+         window.dataLayer = window.dataLayer || []
+         function gtag() {
+            // @ts-ignore
+            dataLayer.push(arguments)
+         }
+         // @ts-ignore
+         gtag("js", new Date())
+         // @ts-ignore
+         gtag("config", "G-Z6XXWCVFLC")
+      </script>
    </head>
    <body class="font-sans text-text">
       <slot />
