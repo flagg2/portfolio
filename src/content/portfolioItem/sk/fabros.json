@@ -1,24 +1,19 @@
 {
-   "title": "abc",
-   "description": "def",
-   "href": "http://www.google.com",
-   "image": "/public/screenshots/renova.webp",
+   "title": "Fabros",
+   "description": "Reprezentatívny web pre spoločnosť zaoberajúcu sa drevostavbami",
+   "href": "https://fabros.sk/",
+   "image": "/public/screenshots/fabros.webp",
    "imageAlt": "Renova Install Website",
    "tech": [
       {
-         "text": "Typescript",
-         "image": "/public/icons/typescript.svg",
-         "imageAlt": "Typescript"
+         "text": "Wordpress",
+         "image": "/public/icons/wordpress.svg",
+         "imageAlt": "Wordpress"
       },
       {
-         "text": "React",
-         "image": "/public/icons/react.svg",
-         "imageAlt": "React"
-      },
-      {
-         "text": "Next.js",
-         "image": "/public/icons/nextjs.svg",
-         "imageAlt": "Next.js"
+         "text": "Bricks Builder",
+         "image": "/public/icons/bricks.svg",
+         "imageAlt": "Bricks Builder"
       }
    ]
 }

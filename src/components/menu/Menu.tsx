@@ -27,16 +27,16 @@ export default function Menu({
    }
 
    return (
-      <div className="fixed inset-x-0 z-10 top-6 flex justify-center">
+      <div className="fixed inset-x-0 z-10 top-6 flex justify-center pointer-events-none">
          <nav className="w-full container mx-auto">
-            <div className="flex justify-between p-4 backdrop-blur-md rounded-lg bg-menu-bg items-center">
+            <div className="flex justify-between p-4 backdrop-blur-md rounded-lg bg-menu-bg items-center  pointer-events-auto">
                <div className="text-3xl">{emoji}</div>
                <MenuButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             </div>
             <div
                className={twMerge(
                   "flex gap-4 flex-col justify-center p-4 backdrop-blur-md rounded-lg bg-menu-bg transition-all mt-2",
-                  !menuOpen && "opacity-0 pointer-events-none",
+                  menuOpen ? "pointer-events-auto" : "opacity-0",
                )}
             >
                <MenuItem

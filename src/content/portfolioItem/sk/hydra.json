@@ -1,8 +1,8 @@
 {
-   "title": "abc",
-   "description": "def",
-   "href": "http://www.google.com",
-   "image": "/public/screenshots/renova.webp",
+   "title": "HydraDX",
+   "description": "Reprezentačná stránka pre projekt HydraDX, ktorý je súčasťou Polkadot ekosystému.",
+   "href": "https://hydradx.io/",
+   "image": "/public/screenshots/hydra.webp",
    "imageAlt": "Renova Install Website",
    "tech": [
       {

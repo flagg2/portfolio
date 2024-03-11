@@ -76,6 +76,7 @@ export default function ContactForm({
                position: "top-center",
                duration: 5000,
                style: {
+                  marginTop: "80px",
                   background: "black",
                   color: "#f2f2f2",
                   border: "1px solid #242424",

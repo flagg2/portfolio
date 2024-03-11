@@ -1,5 +1,8 @@
 {
    "title": "Portfolio",
-   "description": "This is a portfolio of my work. I hope you like it!",
-   "items": ["en/hydra", "en/fabros", "en/basilisk", "en/renova"]
+   "description": "Actions speak louder than words. Here are some of the projects I've worked on.",
+   "items": ["en/hydra", "en/fabros", "en/basilisk", "en/renova"],
+   "t": {
+      "open": "Open"
+   }
 }

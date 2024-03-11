@@ -39,7 +39,7 @@ const classes = twMerge(defaultClasses, additionalClasses)
          )}
       >
          {"emoji" in Astro.props ? (
-            <span class="text-3xl pr-2">{Astro.props.emoji}</span>
+            <div class="text-3xl pr-2">{Astro.props.emoji}</div>
          ) : null}
          {"image" in Astro.props ? (
             <Image
@@ -55,7 +55,7 @@ const classes = twMerge(defaultClasses, additionalClasses)
    ) : (
       <div class={classes}>
          {"emoji" in Astro.props ? (
-            <span class="text-3xl pr-2">{Astro.props.emoji}</span>
+            <div class="text-3xl pr-2">{Astro.props.emoji}</div>
          ) : null}
          {"image" in Astro.props ? (
             <Image

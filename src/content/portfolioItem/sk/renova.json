@@ -1,7 +1,7 @@
 {
-   "title": "abc",
-   "description": "def",
-   "href": "http://www.google.com",
+   "title": "Renova Install",
+   "description": "Web s komplexnou cenovou kalkulačkou pre stavebné služby",
+   "href": "https://renovainstall.sk",
    "image": "/public/screenshots/renova.webp",
    "imageAlt": "Renova Install Website",
    "tech": [
@@ -19,6 +19,11 @@
          "text": "Next.js",
          "image": "/public/icons/nextjs.svg",
          "imageAlt": "Next.js"
+      },
+      {
+         "text": "Node.js",
+         "image": "/public/icons/nodejs.svg",
+         "imageAlt": "Node.js"
       }
    ]
 }

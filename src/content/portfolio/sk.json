@@ -1,5 +1,8 @@
 {
-   "title": "Portfolio",
-   "description": "This is a portfolio of my work. I hope you like it!",
-   "items": ["en/fabros", "en/renova", "en/renova"]
+   "title": "Portfólio",
+   "description": "Lepšie raz vidieť ako sto krát počuť. Pozrite si niektoré z mojich projektov.",
+   "items": ["sk/hydra", "sk/fabros", "sk/basilisk", "sk/renova"],
+   "t": {
+      "open": "Zobraziť"
+   }
 }

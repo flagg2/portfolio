@@ -1,9 +1,9 @@
 {
-   "title": "abc",
-   "description": "def",
-   "href": "http://www.google.com",
-   "image": "/public/screenshots/renova.webp",
-   "imageAlt": "Renova Install Website",
+   "title": "Basilisk",
+   "description": "Štýlový reprezentačný web pre Basilisk",
+   "href": "https://bsx.fi",
+   "image": "/public/screenshots/basilisk.webp",
+   "imageAlt": "Basilisk Website",
    "tech": [
       {
          "text": "Typescript",

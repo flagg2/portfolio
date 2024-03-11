@@ -17,7 +17,7 @@ export default function useCurrentSection(
 
          for (let i = elements.length - 1; i >= 0; i--) {
             const distance = elements[i].getBoundingClientRect().top
-            const isBelowTop = distance < window.innerHeight * 0.5
+            const isBelowTop = distance < window.innerHeight * 0.4
 
             if (isBelowTop) {
                setCurrentSection(orderedSectionIds[i])

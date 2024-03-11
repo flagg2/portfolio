@@ -1,10 +1,16 @@
 ---
 import Image from "astro/components/Image.astro"
 import type { PortfolioItem } from "../../../../content/config"
+import { getEntry } from "astro:content"
+import { castLocale } from "@/utils/locale"
 
 interface Props extends PortfolioItem {}
 
 const { title, description, href, image, imageAlt, tech } = Astro.props
+const locale = castLocale(Astro.currentLocale)
+const {
+   data: { t },
+} = await getEntry("portfolio", locale)
 ---
 
 <a
@@ -42,12 +48,8 @@ const { title, description, href, image, imageAlt, tech } = Astro.props
       <div
          class="text-sm font-semibold flex gap-1 items-center group-hover:underline"
       >
-         Open <Image
-            src="/icons/open.svg"
-            alt="open svg"
-            width={20}
-            height={20}
-         />
+         {t.open}
+         <Image src="/icons/open.svg" alt="open svg" width={20} height={20} />
       </div>
    </div>
 </a>

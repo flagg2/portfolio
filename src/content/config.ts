@@ -59,6 +59,9 @@ const portfolioSchema = z.object({
    title: z.string(),
    description: z.string(),
    items: z.array(reference("portfolioItem")),
+   t: z.object({
+      open: z.string(),
+   }),
 })
 
 const portfolio = defineCollection({
@@ -210,6 +213,20 @@ const menu = defineCollection({
    schema: menuSchema,
 })
 
+const metaSchema = z.object({
+   title: z.string(),
+   description: z.string(),
+   lang: z.string(),
+   alternates: z.array(z.object({ lang: z.string(), href: z.string() })),
+})
+
+type Meta = z.infer<typeof metaSchema>
+
+const meta = defineCollection({
+   type: "data",
+   schema: metaSchema,
+})
+
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
    hero,
@@ -222,6 +239,7 @@ export const collections = {
    team,
    contact,
    menu,
+   meta,
 }
 export type {
    Hero,
@@ -235,4 +253,5 @@ export type {
    Team,
    AstroImage,
    Menu,
+   Meta,
 }
