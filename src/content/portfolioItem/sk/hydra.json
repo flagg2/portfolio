@@ -1,9 +1,9 @@
 {
-   "title": "HydraDX",
-   "description": "Reprezentačná stránka pre projekt HydraDX, ktorý je súčasťou Polkadot ekosystému.",
-   "href": "https://hydradx.io/",
-   "image": "/public/screenshots/hydra.webp",
-   "imageAlt": "Renova Install Website",
+   "title": "Hydration",
+   "description": "Reprezentačná stránka pre projekt Hydration, ktorý je súčasťou Polkadot ekosystému.",
+   "href": "https://hydration.net/",
+   "image": "/public/screenshots/hydration.webp",
+   "imageAlt": "Hydration Website",
    "tech": [
       {
          "text": "Typescript",

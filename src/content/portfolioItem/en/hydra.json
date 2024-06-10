@@ -1,9 +1,9 @@
 {
-   "title": "HydraDX",
-   "description": "Landing page for the liquidity monster on Polkadot",
-   "href": "https://hydradx.io/",
-   "image": "/public/screenshots/hydra.webp",
-   "imageAlt": "Renova Install Website",
+   "title": "Hydration",
+   "description": "Landing page for the best liquidity provider on Polkadot",
+   "href": "https://hydration.net/",
+   "image": "/public/screenshots/hydration.webp",
+   "imageAlt": "Hydration Website",
    "tech": [
       {
          "text": "Typescript",
